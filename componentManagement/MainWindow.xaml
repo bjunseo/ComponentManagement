@@ -68,13 +68,27 @@
             </DataGrid>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Margin = "3"   Background="LightGray" Orientation="Horizontal" >
-            <Canvas Margin = "3"  x:Name="ImageTest" Height="Auto" Width="Auto" ></Canvas>
-            <StackPanel Height="Auto" Width="Auto">
-                <Label x:Name="path"/>
-                <Label x:Name="Name"/>
-            </StackPanel>
-        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
 
+            <Canvas Margin = "3"  x:Name="ImageTest" Height="Auto" Width="Auto" Grid.Column="0"></Canvas>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
